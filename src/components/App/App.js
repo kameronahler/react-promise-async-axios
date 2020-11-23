@@ -1,9 +1,10 @@
 import React from 'react'
+import Promise from '../Promise/Promise'
 
 export default function App() {
   return (
     <>
-      <h1>Parcel + React</h1>
+      <Promise />
     </>
   )
 }
