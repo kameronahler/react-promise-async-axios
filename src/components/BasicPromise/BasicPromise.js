@@ -3,26 +3,36 @@ import React, { useState, useEffect } from 'react'
 export default function BasicPromise() {
   const [users, setUsers] = useState([])
 
-  const getUsers = () => {
-    fetch('http://jsonplaceholder.typicode.com/users').then(response => {
-      if (response.status !== 200) {
-        console.log(response.status)
-        return
-      }
+  const endpointRandom =
+    Math.random() > 0.5 ? '' : 'http://jsonplaceholder.typicode.com/users'
 
-      response.json().then(json => {
-        setUsers(json)
+  const catchError = rej => {
+    console.log(rej)
+  }
+
+  const apiRequest = endpoint => {
+    fetch(endpoint)
+      .then(res => {
+        if (!res.ok) {
+          console.error(res.status)
+          return
+        }
+        console.log(res.status)
+
+        res.json().then(json => {
+          setUsers(json)
+        })
       })
-    })
+      .catch(rej => catchError(rej))
   }
 
   useEffect(() => {
-    getUsers()
+    apiRequest(endpointRandom)
   }, [])
 
   return (
     <>
-      <h1>Basic promise without async</h1>
+      <h1>Fetch, promise</h1>
       <ul>
         {users.map(user => {
           return <li key={user.id}>{user.name}</li>
