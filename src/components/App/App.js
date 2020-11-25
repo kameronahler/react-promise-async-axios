@@ -1,10 +1,10 @@
 import React from 'react'
-import Promise from '../Promise/Promise'
+import BasicPromise from '../BasicPromise/BasicPromise'
 
 export default function App() {
   return (
     <>
-      <Promise />
+      <BasicPromise />
     </>
   )
 }
