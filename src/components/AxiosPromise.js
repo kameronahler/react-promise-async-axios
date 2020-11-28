@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-export default function BasicAxiosPromise() {
+export default function AxiosPromise() {
   const [users, setUsers] = useState(null)
   const [error, setError] = useState(null)
   const endpointRandom =
@@ -13,7 +13,6 @@ export default function BasicAxiosPromise() {
     axios
       .get(endpoint)
       .then(res => {
-        console.log(res)
         if (res.status !== 200) {
           setError(res.statusText)
           return

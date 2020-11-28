@@ -1,16 +1,16 @@
 import React from 'react'
-import BasicPromise from './BasicPromise'
-import AsyncPromise from './AsyncPromise'
-import AsyncTryCatchPromise from './AsyncTryCatchPromise'
-import BasicAxiosPromise from './BasicAxiosPromise'
+import VanillaFetchPromise from './VanillaFetchPromise'
+import VanillaAsyncFetchPromise from './VanillaAsyncFetchPromise'
+import VanillaAsyncTryCatchFetchPromise from './VanillaAsyncTryCatchFetchPromise'
+import AxiosPromise from './AxiosPromise'
 
 export default function App() {
   return (
     <>
-      {/* <BasicPromise /> */}
-      {/* <AsyncPromise /> */}
-      {/* <AsyncTryCatchPromise /> */}
-      <BasicAxiosPromise />
+      <VanillaFetchPromise />
+      <VanillaAsyncFetchPromise />
+      <VanillaAsyncTryCatchFetchPromise />
+      <AxiosPromise />
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-export default function BasicPromise() {
+export default function VanillaFetchPromise() {
   const [users, setUsers] = useState(null)
   const [error, setError] = useState(null)
   const endpointRandom =
@@ -32,7 +32,7 @@ export default function BasicPromise() {
   if (users) {
     return (
       <>
-        <h1>Fetch promise</h1>
+        <h1>Vanilla fetch promise</h1>
         <ul>
           {users.map(user => {
             return <li key={user.id}>{user.name}</li>
@@ -43,7 +43,7 @@ export default function BasicPromise() {
   } else {
     return (
       <>
-        <h1>Fetch, promise</h1>
+        <h1>Vanilla fetch promise</h1>
         <p>{error}</p>
       </>
     )
