@@ -32,7 +32,7 @@ export default function BasicPromise() {
   if (users) {
     return (
       <>
-        <h1>Fetch, promise</h1>
+        <h1>Fetch promise</h1>
         <ul>
           {users.map(user => {
             return <li key={user.id}>{user.name}</li>
