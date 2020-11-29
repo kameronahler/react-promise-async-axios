@@ -3,6 +3,7 @@ import VanillaFetchPromise from './VanillaFetchPromise'
 import VanillaAsyncFetchPromise from './VanillaAsyncFetchPromise'
 import VanillaAsyncTryCatchFetchPromise from './VanillaAsyncTryCatchFetchPromise'
 import AxiosPromise from './AxiosPromise'
+import AxiosAsyncPromise from './AxiosAsyncPromise'
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <VanillaAsyncFetchPromise />
       <VanillaAsyncTryCatchFetchPromise />
       <AxiosPromise />
+      <AxiosAsyncPromise />
     </>
   )
 }
